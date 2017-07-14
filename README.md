@@ -48,3 +48,15 @@ Antinv | `none` | `;toggle antinv` | GuildPermission.ManageChannels | Enable/Dis
 Bans | `none` | `;toggle bans` | GuildPermission.ManageChannels | Enable/Disable bans (tied to adminchannel)
 Joins | `none` | `;toggle joins` | GuildPermission.ManageChannels | Enable/Disable joins (join logging to joinchannel)
 Leaves | `none` | `;toggle leaves` | GuildPermission.ManageChannels | Enable/Disable leaves (leave logging to leavechannel)
+
+# Self-Assignable Roles
+**GENERAL** Don't add any roles with high permissions in here or they `will` be abused by some angry member. Keep in mind that when you remove a role from the self-assignable roles list, someone that has the role cannot remove it from themselfs using the `$iamnot` command!
+
+| Command       | Parameter    | Example            | required permissions   | Output                                                                                                                                                                       |
+|---------------|--------------|--------------------|--------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Asar     | rolename | `;asar test`    | Manage Roles | Adds the specified role to the self assignable roles. Other users can then add them to themselfs using the bot                                                               |
+| rsar  | rolename | `;rsar test` | Manage Roles | Removes the specified role from the self assignable roles. Keep in mind that afterwards users that have that role cannot remove it from themselfs using the $iamnot command! |
+| iam         | rolename | `;iam test`        | *none*       | Adds the specified role to yourself                                                                                                                                          |
+| iamnot      | rolename | `;iamnot test`     | *none*       | Removes the specified role from yourself                                                                                                                                     |
+| lsar | *none*       | `;lsar`     | *none*       | list's all Self Assignable roles in the server                                                                                                   |
+
