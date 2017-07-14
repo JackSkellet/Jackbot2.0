@@ -15,6 +15,7 @@ namespace jack.Modules.Guild
     public class GuildModule : ModuleBase
     {
         [Command("Prefix", RunMode = RunMode.Async), Summary("Sets guild prefix"), Remarks("Prefix .")]
+        [RequireUserPermission(GuildPermission.ManageChannels)]
         public async Task SetPrefixAsync(string prefix)
         {
             var Guild = Context.Guild as SocketGuild;
@@ -37,6 +38,7 @@ namespace jack.Modules.Guild
         [Command("Welcome", RunMode = RunMode.Async),
             Summary("Sets a welcome message for your server."),
             Remarks("Welcome hi")]
+        [RequireUserPermission(GuildPermission.ManageChannels)]
         public async Task WelcomeMessageAsync([Remainder]string msg = null)
         {
 
@@ -60,6 +62,7 @@ namespace jack.Modules.Guild
         [Command("Leave", RunMode = RunMode.Async),
             Summary("Sets a Leaave message for your server."),
             Remarks("Leave MSG")]
+        [RequireUserPermission(GuildPermission.ManageChannels)]
         public async Task LeaveMessageAsync([Remainder]string msg = null)
         {
 

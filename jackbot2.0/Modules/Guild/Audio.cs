@@ -343,6 +343,7 @@ namespace jack.Modules
         [Command("delete")]
         [Remarks("delete 'songnumber'")]
         [Summary("deletes the given song number's file from the servers folder")]
+        [RequireUserPermission(GuildPermission.ManageMessages)]
         public async Task DeleteTask(int song)
         {
 
@@ -380,7 +381,7 @@ namespace jack.Modules
         [Command("delall")]
         [Remarks("delete all")]
         [Summary("Deletes all downloaded song files from the servers folder (ADMIN)")]
-        [RequireUserPermission(GuildPermission.ManageChannels)]
+        [RequireUserPermission(GuildPermission.ManageMessages)]
         public async Task DeleteAllTask()
         {
             var Guild = Context.Guild as SocketGuild;
@@ -399,7 +400,7 @@ namespace jack.Modules
                              $"for a rundown on commands type `{gldConfig.Prefix}help`");
         }
 
-        [Command("join", RunMode = RunMode.Async)]
+        [Command("mjoin", RunMode = RunMode.Async)]
         [Remarks("join")]
         [Summary("Joins your Voice Channel")]
         public async Task JoinCmd()
@@ -408,7 +409,7 @@ namespace jack.Modules
             await _service.JoinAudio(Context.Guild, (Context.User as IVoiceState).VoiceChannel);
         }
 
-        [Command("leave", RunMode = RunMode.Async)]
+        [Command("mleave", RunMode = RunMode.Async)]
         [Remarks("leave")]
         [Summary("Leaves your Voice Channel")]
         public async Task LeaveCmd()
