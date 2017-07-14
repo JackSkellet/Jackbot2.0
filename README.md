@@ -38,8 +38,10 @@ Setchannel | (Adminchannel, Joinchannel, Leavechannel) Channel | `;setchannel ad
 Setmuterole | rolename | `;setmuterole muted` | GuildPermission.ManageRoles | set's a muterole for the server, jackbot takes care of the perms
 Setjoinrole | rolename | `;setjoinrole newb` | GuildPermission.ManageRoles | set's a joinrole for the server, be sure to toggle joinroles for it to take effect
 
-Be sure to use `toggle` before every command in this area
+
 # Toggle Commands
+**Note** Be sure to use `toggle` before every command in this area
+
 Command | parameters | usage | required permissions | details
 ------------ | ------------- | ------------- | ------------- | -------------
 `blank` | `none` | `;toggle` | GuildPermission.ManageChannels | Show's things you can toggle
