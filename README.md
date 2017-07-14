@@ -52,7 +52,7 @@ Joins | `none` | `;toggle joins` | GuildPermission.ManageChannels | Enable/Disab
 Leaves | `none` | `;toggle leaves` | GuildPermission.ManageChannels | Enable/Disable leaves (leave logging to leavechannel)
 
 # Self-Assignable Roles
-**GENERAL** Don't add any roles with high permissions in here or they `will` be abused by some angry member. Keep in mind that when you remove a role from the self-assignable roles list, someone that has the role cannot remove it from themselfs using the `$iamnot` command!
+**GENERAL** Don't add any roles with high permissions in here or they `will` be abused by some angry member. Keep in mind that when you remove a role from the self-assignable roles list, someone that has the role cannot remove it from themselfs using the `;iamnot` command!
 
 | Command       | Parameter    | Example            | required permissions   | Output                                                                                                                                                                       |
 |---------------|--------------|--------------------|--------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -62,3 +62,20 @@ Leaves | `none` | `;toggle leaves` | GuildPermission.ManageChannels | Enable/Dis
 | iamnot      | rolename | `;iamnot test`     | *none*       | Removes the specified role from yourself                                                                                                                                     |
 | lsar | *none*       | `;lsar`     | *none*       | list's all Self Assignable roles in the server                                                                                                   |
 
+# Audio Commands
+
+Command | parameters | usage | required permissions | details
+------------ | ------------- | ------------- | ------------- | -------------
+queue | `none` | `;queue` or `q` | `none` | Show's the queue in the server
+q add | yt link or search term | `;q add youtube.com/video` or `;q add videoname` | `none` | Add a song to the queue
+q pl | yt playlist link | `;q pl youtubeplaylist-link` | `none` | try to add the 10 first videos in the playlist to the queue
+np | `none` | `;np` | `none` | show's what song is playing and how far along it is
+q all | `none` | `;q all` | `none` | play all songs in server's music folder
+q skip | `none` | `;q skip` | `none` | skip current song
+q clear | `none` | `q clear` | `none` | clear the entire queue
+q play | `none` | `;q play` | `none` | start the music
+songs | `none` | `;songs` | `none` | show server's music folder
+delet | number | `;delet 0` | GuildPermission.ManageMessages | delet song from music folder
+delall | `none` | `;delall` | GuildPermission.ManageMessages | delet all songs from music folder
+mjoin | `none` | `;mjoin` | `none` | join voice channel
+mleave | `none` | `;mleave` | `none` | leave voice channel
