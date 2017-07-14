@@ -79,3 +79,7 @@ delet | number | `;delet 0` | GuildPermission.ManageMessages | delet song from m
 delall | `none` | `;delall` | GuildPermission.ManageMessages | delet all songs from music folder
 mjoin | `none` | `;mjoin` | `none` | join voice channel
 mleave | `none` | `;mleave` | `none` | leave voice channel
+
+
+# Image Commands
+**Note**i am lazy, you can find all 23 image commands on help page 3 using the `;help` command
